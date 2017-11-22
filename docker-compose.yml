@@ -1,0 +1,12 @@
+mysql:
+  build: .
+  environment:
+    MYSQL_ROOT_PASSWORD: root   
+    MYSQL_USER: user
+    MYSQL_PASSWORD: pswd
+    MYSQL_DATABASE: testdb
+    TZ: "Asia/Tokyo"
+  ports:
+    - 3306:3306
+  volumes:
+    - ./db:/var/lib/mysql
